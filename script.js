@@ -7,10 +7,10 @@
 
 //counter starts here
    let time = {
-    days: 2,
-    hours: 0,
-    minutes: 0,
-    seconds: 0
+    days: 5,
+    hours: 24,
+    minutes:60,
+    seconds: 60
   };
 
   function counter() {
