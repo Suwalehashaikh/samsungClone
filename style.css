@@ -177,7 +177,7 @@ border-bottom: 2.5px solid #006bea;
     background-size: cover;
     background-position: 0 0;
     transition: 2s ease-in-out;
-    padding-top: 3rem;
+    padding: 5rem;
    
 }
 .Banner:hover{
@@ -188,7 +188,7 @@ border-bottom: 2.5px solid #006bea;
     position: absolute;
    text-align: center;
    left:52.5%;
-   top: 77.5%;
+   top: 78.5%;
 
 }
 .Learn{
@@ -201,7 +201,7 @@ border-bottom: 2.5px solid #006bea;
     font-weight: 600;
    padding: 0.7rem 0rem;
     left:52.5%;
-   top: 84%;
+   top: 86%;
    position: absolute;
    letter-spacing: 1px;
    
@@ -214,7 +214,7 @@ border-bottom: 2.5px solid #006bea;
     font-weight: 600;
     padding: 0.7rem 1rem;
     left:60%;
-   top: 84%;
+   top: 86%;
    position: absolute;
     border-radius: 25px;
    letter-spacing: 1px;
@@ -228,13 +228,13 @@ border-bottom: 2.5px solid #006bea;
 /*hero-section-two starts here*/
 .Banner-two{
     border:none;
-    width: 100%;
-   height: 100%;
+    width: 100vw;
+   height: 100vh;
     background-image: url("image/hero-section-2-img.avif");
     background-repeat: no-repeat;
     background-size: cover;
    
-    padding: 5rem;
+    padding: 30rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -287,7 +287,7 @@ border-bottom: 2.5px solid #006bea;
     padding-top: 2rem;
     transition: 1s ease-in-out;
     border: none;
-    
+    margin: 3rem;
   
 }
 .card > div {
@@ -349,7 +349,7 @@ border: 1px dashed black;
 }
 .banner-third > p{
     font-size: 1.7rem;
-  padding: 1rem 0rem 0rem 10rem;
+    padding: 1rem 0rem 0rem 10rem;
 }
 #learn {
     border-bottom: 1px solid black;
@@ -380,61 +380,123 @@ border: 1px dashed black;
 
 /*banner third ends here*/
 /*washing machine banner starts  here*/
-.banner-four{
-    width: 100%;
-    height: 100vh;
-    background-image: url("image/washing\ machine");
-    background-repeat: no-repeat;
+.banner-four {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000; 
+  background-image: url("image/washing\ machine"); 
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left center; 
+  display: flex;
+  align-items: center;
+  justify-content: flex-end; 
+  padding-right: 8rem;
+  box-sizing: border-box;
+}
+
+
+.banner-content {
+  max-width: 480px;
+  text-align: left;
+}
+
+
+.banner-four .heading {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+
+.banner-four .subtext {
+  font-size: 1.4rem;
+  color: #fff;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+
+.banner-four .btn1 {
+  border: none;
+  border-bottom: 1px solid #fff;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  color: #fff;
+  letter-spacing: 1px;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.banner-four .btn1:hover {
+  opacity: 0.7;
+}
+
+.banner-four .btn2 {
+  border: 1px solid #fff;
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+}
+
+.banner-four .btn2:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* Responsive (mobile/tablet) */
+@media (max-width: 768px) {
+  .banner-four {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-position: center top;
     background-size: cover;
-    position: relative;
-     background-position: 0rem 3rem;
+    text-align: center;
+  }
+  .banner-content {
+    max-width: 100%;
+    text-align: center;
+  }
 }
-.banner-four p:nth-child(1){
-font-size: 4rem;
-color: #fff;
-font-weight: 700;
-padding: 18rem 0rem 0rem 45rem;
-width: 35%;
-position: absolute;
-}
-.banner-four p:nth-child(2){
-font-size: 2rem;
-color: #fff;
-font-weight: 700;
-padding: 28rem 0rem 0rem 45rem;
-width: 30%;
-position: absolute;
-}
-.btn1{
-    border-bottom: 1px solid #fff;
-    font-size: 13px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    background-color: transparent;
-    font-weight: 600;
-   color: #fff;
-   letter-spacing: 1px;
-   margin: 32rem 0rem 0rem 45rem;
-}
-.btn2{
+
+/*washing machine banner ends here*/
+/* Second button (Buy style) */
+.btn2 {
     border: 1px solid #fff;
-    font-size: 13px;
-    background-color: transparent;
+    font-size: 14px;
+    background: transparent;
     font-weight: 600;
     border-radius: 25px;
-   letter-spacing: 1px;
-   transition: 0.8s;
-   color: #fff;
-   margin: 32rem 0rem 0rem 1rem;
-     padding: 0.7rem 1.8rem;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    color: #fff;
+    padding: 0.7rem 1.8rem;
+    cursor: pointer;
 }
-.btn2:hover{
-    background-color: #fff;
+
+.btn2:hover {
+    background: #fff;
     color: #000;
 }
-/*washing machine ends ere*/
+
 /*electromic-starts here*/
+.electronic-item-grid{
+  height: 100vh;
+  width: 100vw;
+  
+}
 .card-one {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -442,7 +504,7 @@ position: absolute;
     height: 50vh;
     padding-top: 2rem;
     transition: 1s ease-in-out;
-    border: 1px solid;
+    
 }
 .card-one > div {
     background-color: #f7f7f7;
@@ -489,7 +551,7 @@ border: 1px dashed black;
 /*electromic-ends here*/
 /*content starts here*/
 .text{
-   margin: 2rem 2rem 2rem 2rem;
+
     height: 10rem;
     width: 95vw;
      background-color: #f7f7f7;
@@ -505,7 +567,7 @@ border: 1px dashed black;
 /*counter starts here*/
  .offer-container {
         max-width: 500px;
-        margin: 50px auto;
+        margin: 100px auto;
         padding: 20px;
         background: linear-gradient(135deg, #8391e0, #beb9b0);
         color: white;
