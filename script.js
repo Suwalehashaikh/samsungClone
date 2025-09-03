@@ -1,8 +1,7 @@
 // Hamburger toggle
-function toggleMenu() {
-  const menu = document.querySelector(".hamburger-menu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
-}
+function hamburger(){
+   document.querySelector('.hamburger-hide').classList.toggle('hamburger-show');
+   }
 
 // Countdown Timer
 function startCountdown() {
