@@ -68,7 +68,7 @@ border-bottom: 2.5px solid #006bea;
 .hamburger-hide{
             height: 100vh;
             background-color: #fff;
-            right: -15.2rem;
+            right: -18.2rem;
             top: 4.3rem;
             color: #000;
             position: absolute;
@@ -288,7 +288,7 @@ border-bottom: 2.5px solid #006bea;
     padding-top: 2rem;
     transition: 1s ease-in-out;
     border: none;
-    margin: 3rem;
+  
 }
 .card > div {
     background-color: #f7f7f7;
