@@ -1,44 +1,29 @@
- function hamburger(){
-       document.querySelector('.hamburger-hide').classList.toggle('hamburger-show');
-    }
-     var time = {days: 5, hours: 24, minutes: 60, seconds: 0};
+// Hamburger toggle
+function toggleMenu() {
+  const menu = document.querySelector(".hamburger-menu");
+  menu.style.display = menu.style.display === "block" ? "none" : "block";
+}
 
-    var timerStop = setInterval(counter, 1000);
+// Countdown Timer
+function startCountdown() {
+  const endDate = new Date("Sep 10, 2025 23:59:59").getTime();
 
-//counter starts here
-   let time = {
-    days: 5,
-    hours: 24,
-    minutes:60,
-    seconds: 60
-  };
+  setInterval(() => {
+    const now = new Date().getTime();
+    const diff = endDate - now;
 
-  function counter() {
-    if (time.days > 0 || time.hours > 0 || time.minutes > 0 || time.seconds > 0) {
+    if (diff <= 0) return;
 
-      time.seconds--;
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((diff % (1000 * 60)) / 1000);
 
-      if (time.seconds < 0) {
-        time.seconds = 59;
-        time.minutes--;
-      }
-      if (time.minutes < 0) {
-        time.minutes = 59;
-        time.hours--;
-      }
-      if (time.hours < 0) {
-        time.hours = 23;
-        time.days--;
-      }
-      document.getElementById("days").innerText = time.days;
-      document.getElementById("hours").innerText = time.hours;
-      document.getElementById("minutes").innerText = time.minutes;
-      document.getElementById("seconds").innerText = time.seconds;
+    document.getElementById("days").textContent = days;
+    document.getElementById("hours").textContent = hours;
+    document.getElementById("minutes").textContent = minutes;
+    document.getElementById("seconds").textContent = seconds;
+  }, 1000);
+}
 
-    } else {
-      clearInterval(timerStop);
-      alert("⏰ Offer has ended!");
-    }
-  }
-  // run every second
-  let timerStop = setInterval(counter, 1000);
+startCountdown();
