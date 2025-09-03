@@ -3,6 +3,7 @@
     padding: 0;
     font-family: Arial, sans-serif;
     box-sizing: border-box;
+    overflow: hidden;
 }
 /*header starts from here*/
 header{
@@ -67,7 +68,7 @@ border-bottom: 2.5px solid #006bea;
 .hamburger-hide{
             height: 100vh;
             background-color: #fff;
-            right: -18.2rem;
+            right: -15.2rem;
             top: 4.3rem;
             color: #000;
             position: absolute;
@@ -229,7 +230,7 @@ border-bottom: 2.5px solid #006bea;
 .Banner-two{
     border:none;
     width: 100%;
-   height: 100vh;
+   height: 100%;
     background-image: url("image/hero-section-2-img.avif");
     background-repeat: no-repeat;
     background-size: cover;
@@ -287,6 +288,7 @@ border-bottom: 2.5px solid #006bea;
     padding-top: 2rem;
     transition: 1s ease-in-out;
     border: none;
+    margin: 3rem;
 }
 .card > div {
     background-color: #f7f7f7;
