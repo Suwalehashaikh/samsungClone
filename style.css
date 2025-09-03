@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
+    box-sizing: border-box;
 }
 /*header starts from here*/
 header{
@@ -629,15 +630,57 @@ footer > p > a{
 }
 
 /*Footer ends here*/
-/* Responsive */
-@media (max-width: 768px) {
-  .main-nav {
-    display: none;
+@media (max-width: 360px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
   }
-  .hamburger {
-    display: block;
+
+  .search input {
+    width: 120px;
+    font-size: 13px;
   }
-  .products {
-    grid-template-columns: repeat(2, 1fr);
+
+  .Banner {
+    height: 350px;
+  }
+  .Banner div {
+    font-size: 1rem;
+    left: 50%;
+    top: 65%;
+    transform: translateX(-50%);
+  }
+
+  .Learn,
+  .Pre-Order,
+  .More,
+  .More-two,
+  .btn1,
+  .btn2 {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+  }
+
+  .banner-third h1 {
+    font-size: 1.8rem;
+    padding: 8rem 1rem 0 1rem;
+  }
+  .banner-third p {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+
+  footer {
+    margin: 0.5rem;
+  }
+  .left-links,
+  .right-links {
+    flex-direction: column;
+    gap: 0.8rem;
   }
 }
