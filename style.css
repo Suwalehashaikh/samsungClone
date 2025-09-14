@@ -1,833 +1,199 @@
-*{
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    box-sizing: border-box;
-}
-/*header starts from here*/
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-  font-weight: 500;
-  flex-wrap: wrap;
- 
-}
-
-.header-left{
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
-
-li{
-    list-style: none;
-}
-.header-left > li > a{
-padding-bottom: 14px;
-border-bottom: 2.5px solid transparent;
-transition: 0.2s;
-}
-
-.header-left > li {
-    padding : 20px 0;
-}
-.header-left > a{
-    text-decoration: none;
-}
-.header-left > li:nth-child(1):hover{
-    border-bottom: none;
-}
-.header-left > li:nth-child(1){
-    border-bottom: none;
-}
-.header-left > li:hover{
-color: #006bea;
-border-bottom: 2.5px solid #006bea;
-}
-.header-right div:nth-child(2){
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.search{
-    border: none;
-    padding: 10px 15px;
-    border-radius: 50px;
-    background-color: #f6f6f6;
-}
-.search input{
-    border: none;
-    outline: none;
-    background-color: #f6f6f6;
-}
-.fa-cart-shopping, .fa-user{
-    font-size: 20px;
-}
-.hamburger-hide{
-            height: 100vh;
-            background-color: #fff;
-            right: -18.2rem;
-            top: 4.3rem;
-            color: #000;
-            position: absolute;
-            width: 250px;
-            transition: 0.5s ease-in-out;
-            line-height: 2rem;
-            padding: 20px;
-        }
-.hamburger-show{
-           right: 0;
-        }
-/*header ends here*/
-/* shop dropdown starts here*/
-    .dropdown-menu{
-        width: 100%;
-        border: none;
-        left: 0;
-        top: 4.60rem;
-        position: absolute;
-        display: flex;
-        gap: 5px;
-        display: none;
-        transition: 2s ease-in;
-
-    }
-    .dropdown:hover .dropdown-menu{
-       display: block;
-        display: flex;
-    }
-    .dropdown-left, .dropdown-right{
-        border: none;
-        margin: 0.8rem 1rem;
-    }
-    .dropdown-left{
-        display: flex;
-        width: 70%;
-        flex-wrap: wrap;
-    }
-    .dropdown-left img:hover{
-        transform: scale(1.1);
-    }
-  
-    .product-card-left{
-        width: 7rem;
-        border: none;
-        font-size: 12px;
-        font-weight: 500;
-        text-align: center;
-        margin: 1rem;
-        
-    }
-    
-    .product-card-left >p{
-        color: black;
-        font-weight: 500;
-    }
-   
-
-.new-product::before {
-    
-    left: 8rem;
-    color: #006bea;
-     padding: 2px 6px;
+/* ===========================
+   Phones (max-width: 600px)
+=========================== */
+@media (max-width: 600px) {
+  /* Header */
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0.5rem 1rem;
+  }
+  .header-left {
+    display: none; /* hide full nav, use hamburger */
+  }
+  .hamburger-hide {
+    width: 70%;
+    right: -70%;
+  }
+  .search input {
+    width: 120px;
     font-size: 12px;
-    font-weight: bold;
-    
-}
-    .dropdown-pipe{
-        border: 1px solid rgb(230, 226, 226);
-    }
-    .dropdown-right{
-        display: flex;
-        width: 30%;
-        flex-wrap: wrap;
-    }
-    .product-card-right{
-       width: 11rem;
-        font-size: 12px;
-        text-align: center;
-        margin: 1rem;
-        border-radius: 10px;
-        
-    }
-    .products {
-      display: flex;
-      align-items: center;
-      background-color: #f6f6f6;
-      border-radius: 10px;
-     transition:  0.3s;
-    }
-    .products:hover{
-        border: 1px dashed black;
-        border-radius: 10px;
-    }
-    .products span {
-      font-size: 12px;
-      font-weight: 500;
-      color: #333;
-    }
-/* shop dropdown ends here*/
-/*hero-section-one starts here*/
-.Banner{
-    width: 100%;
-    height: 700px;
-    background-image: url("image/bg-hero");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 0 0;
-    transition: 2s ease-in-out;
-    padding: 5rem;
-   
-}
-.Banner:hover{
-    border: 1px dashed black;
-}
-.Banner div{
-    font-size: 2rem;
-    position: absolute;
-   text-align: center;
-   left:52.5%;
-   top: 78.5%;
+  }
 
-}
-.Learn{
-    border-bottom: 1px solid black;
-    font-size: 13px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    background-color: transparent;
-    font-weight: 600;
-   padding: 0.7rem 0rem;
-    left:52.5%;
-   top: 86%;
-   position: absolute;
-   letter-spacing: 1px;
-   
-}
+  /* Hero Section One */
+  .Banner {
+    height: 350px;
+    padding: 1.5rem;
+  }
+  .Banner div {
+    font-size: 1.2rem;
+    left: 50%;
+    top: 60%;
+    transform: translateX(-50%);
+  }
+  .Learn, .Pre-Order {
+    font-size: 11px;
+    padding: 0.4rem 0.8rem;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+  }
 
-.Pre-Order {
-    border: 1px solid black;
-    font-size: 13px;
-    background-color: transparent;
-    font-weight: 600;
-    padding: 0.7rem 1rem;
-    left:60%;
-   top: 86%;
-   position: absolute;
-    border-radius: 25px;
-   letter-spacing: 1px;
-   transition: 2s;
-}
-.Pre-Order:hover{
-    background-color: black;
-    color: #fff;
-}
-/*hero-section-one ends here*/
-/*hero-section-two starts here*/
-.Banner-two{
-    border:none;
-    width: 100vw;
-   height: 100vh;
-    background-image: url("image/hero-section-2-img.avif");
-    background-repeat: no-repeat;
-    background-size: cover;
-   
-    padding: 30rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
-}
-.Banner-two > p{
-    font-size: 1.5rem;
-    position: absolute;
-   text-align: center;
-   margin-top: 32rem;
-}
-.More{
-    border-bottom: 1px solid black;
-    font-size: 13px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    background-color: transparent;
-    font-weight: 600;
-   padding: 0.7rem 0rem;
-   position: absolute;
-   letter-spacing: 1px;
-    margin-top: 38rem;
-    margin-right: 13rem;  
-}
-.More-two{
-    margin-top: 38rem;
-    margin-left: 13rem;  
-    border: 1px solid black;
-    font-size: 13px;
-    background-color: transparent;
-    font-weight: 600;
-    padding: 0.7rem 1rem;
-   position: absolute;
-    border-radius: 25px;
-   letter-spacing: 1px;
-   transition: 0.8s;
-}
-.More-two:hover{
-    background-color: black;
-    color: #fff;
-}
-/*hero-section-two ends here*/
-/*grid-cards-starts here*/
-.card {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    height: 50vh;
-    padding-top: 2rem;
-    transition: 1s ease-in-out;
-    border: none;
-    margin: 3rem;
-  
-}
-.card > div {
-    background-color: #f7f7f7;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    justify-items: center; 
-    align-items: center;
-    padding: 1rem;
-   
-}
-.card > div:hover{
-border: 1px dashed black;
-}
-.card h2 {
-    text-align: center;
-    margin: 0;
-}
-.card img {
-    width: 80%;
+  /* Hero Section Two */
+  .Banner-two {
     height: auto;
-    transition: transform 0.3s ease-in-out;
-}
+    padding: 15rem 1rem 5rem;
+  }
+  .Banner-two > p {
+    font-size: 1rem;
+    margin-top: 15rem;
+  }
+  .More, .More-two {
+    font-size: 11px;
+    margin-top: 18rem;
+  }
 
-.card img:hover {
-    transform: scale(1.1);
-}
+  /* Grid Cards */
+  .card, .card-one {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+    height: auto;
+    margin: 1rem;
+  }
 
-.card button {
-    height: 2.5rem;
-    border-radius: 40px;
-    background-color: black;
-    color: #fff;
-    width: 4.3rem;
-    text-align: center;
-    transition: 0.3s ease-in-out;
-    border: none;
-    cursor: pointer;
-}
+  /* Banner Third */
+  .banner-third h1 {
+    font-size: 2rem;
+    padding: 10rem 1rem 0;
+  }
+  .banner-third p, #learn, #view {
+    font-size: 1rem;
+    padding-left: 1rem;
+    margin: 0.5rem 0;
+  }
 
-.card button:hover {
-    transform: translateY(-20px);
-}
-
-/*grid-ends here*/
-/*banner third starts here*/
-.banner-third{
-    width: 100%;
-    height: 100vh;
-    background-image: url("image/4th\ img.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: 1rem 1rem;
-    border: none;
-}
-.banner-third > h1{
-    font-size: 3.5rem;
-    padding: 23rem 0rem 0rem 10rem;
-}
-.banner-third > p{
-    font-size: 1.7rem;
-    padding: 1rem 0rem 0rem 10rem;
-}
-#learn {
-    border-bottom: 1px solid black;
-    font-size: 13px;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    background-color: transparent;
-    font-weight: 600;
-   margin: 1rem 0rem 0rem 10rem;
-   letter-spacing: 1px;
-}
-#view{
-    border: 1px solid black;
-    font-size: 13px;
-    background-color: transparent;
-    font-weight: 600;
-    border-radius: 25px;
-   letter-spacing: 1px;
-   transition: 0.8s;
-   margin: 1rem 0rem 0rem 1rem;
-   padding: 0.7rem 1.5rem;
-}
-#view:hover{
-    background-color: black;
-    color: #fff;
-}
-
-/*banner third ends here*/
-/*washing machine banner starts  here*/
-.banner-four {
-  width: 100%;
-  min-height: 100vh;
-  background-color: #000; 
-  background-image: url("image/washing\ machine"); 
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: left center; 
-  display: flex;
-  align-items: center;
-  justify-content: flex-end; 
-  padding-right: 8rem;
-  box-sizing: border-box;
-}
-
-
-.banner-content {
-  max-width: 480px;
-  text-align: left;
-}
-
-
-.banner-four .heading {
-  font-size: 3.5rem;
-  color: #fff;
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 1rem;
-}
-
-
-.banner-four .subtext {
-  font-size: 1.4rem;
-  color: #fff;
-  font-weight: 400;
-  margin-bottom: 2rem;
-  opacity: 0.85;
-}
-
-
-.banner-four .btn1 {
-  border: none;
-  border-bottom: 1px solid #fff;
-  font-size: 14px;
-  background: transparent;
-  font-weight: 600;
-  color: #fff;
-  letter-spacing: 1px;
-  margin-right: 1.5rem;
-  cursor: pointer;
-  transition: opacity 0.3s ease;
-}
-
-.banner-four .btn1:hover {
-  opacity: 0.7;
-}
-
-.banner-four .btn2 {
-  border: 1px solid #fff;
-  font-size: 14px;
-  background: transparent;
-  font-weight: 600;
-  border-radius: 25px;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-  color: #fff;
-  padding: 0.7rem 1.8rem;
-  cursor: pointer;
-}
-
-.banner-four .btn2:hover {
-  background: #fff;
-  color: #000;
-}
-
-/* Responsive (mobile/tablet) */
-@media (max-width: 768px) {
+  /* Banner Four */
   .banner-four {
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     padding: 2rem;
-    background-position: center top;
+    background-position: center;
     background-size: cover;
-    text-align: center;
   }
   .banner-content {
     max-width: 100%;
     text-align: center;
   }
-}
-
-/*washing machine banner ends here*/
-/* Second button (Buy style) */
-.btn2 {
-    border: 1px solid #fff;
-    font-size: 14px;
-    background: transparent;
-    font-weight: 600;
-    border-radius: 25px;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-    color: #fff;
-    padding: 0.7rem 1.8rem;
-    cursor: pointer;
-}
-
-.btn2:hover {
-    background: #fff;
-    color: #000;
-}
-
-/*electromic-starts here*/
-.electronic-item-grid{
-  height: 100vh;
-  width: 100vw;
-  
-}
-.card-one {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1rem;
-    height: 50vh;
-    padding-top: 2rem;
-    transition: 1s ease-in-out;
-    
-}
-.card-one > div {
-    background-color: #f7f7f7;
-    display: grid;
-    grid-template-rows: auto 1fr auto;
-    justify-items: center; 
-    align-items: center;
-    padding: 1rem;
-   
-}
-.card-one > div:hover{
-border: 1px dashed black;
-}
-.card-one h2 {
-    text-align: center;
-    margin: 0;
-}
-.card-one img {
-    width: 80%;
-    height: auto;
-    transition: transform 0.3s ease-in-out;
-}
-
-.card-one img:hover {
-    transform: scale(1.1);
-}
-
-.card-one button {
-    height: 2.5rem;
-    border-radius: 40px;
-    background-color: black;
-    color: #fff;
-    width: 4.3rem;
-    text-align: center;
-    transition: 0.3s ease-in-out;
-    border: none;
-    cursor: pointer;
-}
-
-.card-one button:hover {
-    transform: translateY(-50px);
-}
-
-/*electromic-ends here*/
-/*content starts here*/
-.text{
-
-    height: 10rem;
-    width: 95vw;
-     background-color: #f7f7f7;
-}
-.text p{
-    
-     font-size: 12px;
-     text-align: justify;
-     padding: 1.5rem 2rem 0rem 2rem;
-}
-/*content ends here*/
-
-/*counter starts here*/
- .offer-container {
-        max-width: 500px;
-        margin: 100px auto;
-        padding: 20px;
-        background: linear-gradient(135deg, #8391e0, #beb9b0);
-        color: white;
-        text-align: center;
-        border-radius: 15px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-    }
-
-    .offer-container h2 {
-        margin-bottom: 10px;
-        font-size: 26px;
-        font-weight: bold;
-    }
-
-    .countdown {
-        display: flex;
-        justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
-    }
-
-    .time-box {
-        background: rgba(255, 255, 255, 0.2);
-        padding: 15px 20px;
-        border-radius: 10px;
-        text-align: center;
-        min-width: 70px;
-    }
-
-    .time-box span {
-        display: block;
-        font-size: 28px;
-        font-weight: bold;
-    }
-
-    .time-label {
-        font-size: 12px;
-        opacity: 0.9;
-    }
-/*counter starts here*/
-/*last grid start here*/
-.grid-menu {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 20px;
-    background-color: #fff;
-   margin: 2rem 2rem 2rem 2rem;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
-    border-left: none;
-    border-right: none;
-    width: 95vw;
-    
-}
-.menu-column{
-     border-top: none;
-    border-bottom: none;
-    border-left: none;
-    padding: 20px 10px;
-   border-right: 1px solid #ddd;
-}
-.menu-column h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-    color: #000;
-}
-
-.menu-column p {
-    font-size: 14px;
-    margin: 6px 0;
-    color: #333;
-    cursor: pointer;
-    line-height: 2rem;
-}
-
-.menu-column p:hover {
-    color: #007aff;
-    text-decoration: underline;
-}
-
-/*last grid ends here*/
-/*Footer strts here*/
-footer{
-    margin: 0rem 2rem;
-    width: 95vw;
-    background-color: #fff;
-    border-bottom:1px solid #ddd;
-}
-footer > p{
-    font-size: 12px;
-    line-height: 1rem;
-    padding:0.5rem 0rem;
-}
-footer > p > a{
-   text-decoration: none;
-}
-.footer {
-  display: flex;
-  justify-content: space-between; 
-  align-items: center;         
-  border-top: 2px solid #ddd;
-  padding: 1rem 0rem;
-}
-
-.left-links,
-.right-links {
-  display: flex;
-  list-style: none;
-  gap: 15px;
-  padding: 0;
-  margin: 0;
-}
-
-.left-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 12px;
-}
-
-.right-links a {
-  text-decoration: none;
-  color: black;
-  font-size: 15px;
-}
-
-/*Footer ends here*/
-/* ===========================
-   Phones (min 344px up to ~600px)
-=========================== */
-@media (max-width: 600px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0.5rem 1rem;
-  }
-
-  .header-left {
-    display: none; /* hide full nav, use hamburger */
-  }
-
-  .hamburger-hide {
-    width: 70%;
-    right: -70%;
-  }
-
-  .search input {
-    width: 150px;
-    font-size: 12px;
-  }
-
-  .Banner {
-    height: 380px;
-    padding-top: 1.5rem;
-  }
-  .Banner div {
-    font-size: 1.2rem;
-    left: 50%;
-    top: 65%;
-    transform: translateX(-50%);
-  }
-
-  .Learn,
-  .Pre-Order,
-  .More,
-  .More-two,
-  .btn1,
-  .btn2 {
-    font-size: 11px;
-    padding: 0.4rem 0.8rem;
-  }
-
-  .Banner-two p {
-    font-size: 1rem;
-    margin-top: 18rem;
-  }
-
-  .card,
-  .card-one {
-    grid-template-columns: 1fr 1fr;
-    height: auto;
-  }
-
-  .banner-third h1 {
+  .banner-four .heading {
     font-size: 2rem;
-    padding: 10rem 1rem 0;
   }
-  .banner-third p {
+  .banner-four .subtext {
     font-size: 1rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .banner-four p:nth-child(1) {
-    font-size: 2rem;
-    padding: 10rem 1rem 0;
-    width: 90%;
-  }
-  .banner-four p:nth-child(2) {
-    font-size: 1rem;
-    padding: 15rem 1rem 0;
-    width: 80%;
   }
   .btn1, .btn2 {
-    margin: 22rem 0 0 1rem;
+    margin: 1rem 0;
   }
 
+  /* Grid Menu */
   .grid-menu {
     grid-template-columns: 1fr;
     margin: 1rem;
   }
 
+  /* Footer */
   footer {
     margin: 0.5rem;
   }
   .footer {
     flex-direction: column;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 0.5rem;
   }
 }
 
 /* ===========================
    Tablets (601px – 900px)
 =========================== */
-@media (max-width: 900px) and (min-width: 601px) {
-  .card,
-  .card-one {
-    grid-template-columns: repeat(2, 1fr);
+@media (min-width: 601px) and (max-width: 900px) {
+  /* Hero Section One */
+  .Banner {
+    height: 500px;
+    padding: 3rem;
+  }
+  .Banner div {
+    font-size: 1.5rem;
+    left: 50%;
+    top: 70%;
+    transform: translateX(-50%);
+  }
+  .Learn, .Pre-Order {
+    font-size: 12px;
+    left: 50%;
+    top: 78%;
+    transform: translateX(-50%);
   }
 
-  .grid-menu {
-    grid-template-columns: repeat(2, 1fr);
+  /* Hero Section Two */
+  .Banner-two {
+    padding: 20rem 2rem 5rem;
+  }
+  .Banner-two > p {
+    font-size: 1.2rem;
+    margin-top: 20rem;
   }
 
+  /* Grid Cards */
+  .card, .card-one {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* Banner Third */
   .banner-third h1 {
     font-size: 2.5rem;
     padding: 14rem 2rem 0;
   }
-
-  .banner-four p:nth-child(1) {
-    font-size: 2.5rem;
-    padding: 12rem 2rem 0;
-    width: 80%;
-  }
-  .banner-four p:nth-child(2) {
+  .banner-third p {
     font-size: 1.2rem;
-    padding: 18rem 2rem 0;
-    width: 70%;
+    padding-left: 2rem;
+  }
+
+  /* Banner Four */
+  .banner-four .heading {
+    font-size: 2.5rem;
+  }
+  .banner-four .subtext {
+    font-size: 1.2rem;
+  }
+
+  /* Grid Menu */
+  .grid-menu {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* ===========================
-   Small Desktops (901px – 1200px)
+   Desktops (901px – 1200px)
 =========================== */
-@media (max-width: 1200px) and (min-width: 901px) {
-  .card,
-  .card-one {
+@media (min-width: 901px) and (max-width: 1200px) {
+  .card, .card-one {
     grid-template-columns: repeat(3, 1fr);
   }
 
   .grid-menu {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .banner-third h1 {
+    font-size: 3rem;
+    padding: 18rem 3rem 0;
+  }
+
+  .banner-four .heading {
+    font-size: 3rem;
+  }
+  .banner-four .subtext {
+    font-size: 1.3rem;
   }
 }
