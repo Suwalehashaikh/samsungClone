@@ -1,4 +1,6 @@
-/* ✅ Global Reset */
+/* ===========================
+   Base Reset
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -6,13 +8,16 @@
   box-sizing: border-box;
 }
 
-/*header starts from here*/
+/* ===========================
+   Header
+=========================== */
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-weight: 500;
   flex-wrap: wrap;
+  padding: 0.5rem 1rem;
 }
 
 .header-left {
@@ -24,48 +29,52 @@ header {
 li {
   list-style: none;
 }
+
 .header-left > li > a {
   padding-bottom: 14px;
   border-bottom: 2.5px solid transparent;
   transition: 0.2s;
+  text-decoration: none;
 }
 
 .header-left > li {
   padding: 20px 0;
 }
-.header-left > a {
-  text-decoration: none;
-}
+
+.header-left > li:nth-child(1),
 .header-left > li:nth-child(1):hover {
   border-bottom: none;
 }
-.header-left > li:nth-child(1) {
-  border-bottom: none;
-}
+
 .header-left > li:hover {
   color: #006bea;
   border-bottom: 2.5px solid #006bea;
 }
+
 .header-right div:nth-child(2) {
   display: flex;
   align-items: center;
   gap: 10px;
 }
+
 .search {
   border: none;
   padding: 10px 15px;
   border-radius: 50px;
   background-color: #f6f6f6;
 }
+
 .search input {
   border: none;
   outline: none;
   background-color: #f6f6f6;
 }
+
 .fa-cart-shopping,
 .fa-user {
   font-size: 20px;
 }
+
 .hamburger-hide {
   height: 100vh;
   background-color: #fff;
@@ -78,15 +87,16 @@ li {
   line-height: 2rem;
   padding: 20px;
 }
+
 .hamburger-show {
   right: 0;
 }
-/*header ends here*/
 
-/* shop dropdown starts here*/
+/* ===========================
+   Shop Dropdown
+=========================== */
 .dropdown-menu {
   width: 100%;
-  border: none;
   left: 0;
   top: 4.6rem;
   position: absolute;
@@ -94,28 +104,30 @@ li {
   gap: 5px;
   transition: 0.3s ease-in;
   background: #fff;
-  z-index: 50;
 }
+
 .dropdown:hover .dropdown-menu {
   display: flex;
 }
+
 .dropdown-left,
 .dropdown-right {
   border: none;
   margin: 0.8rem 1rem;
 }
+
 .dropdown-left {
   display: flex;
   width: 70%;
   flex-wrap: wrap;
 }
+
 .dropdown-left img:hover {
   transform: scale(1.1);
 }
 
 .product-card-left {
   width: 7rem;
-  border: none;
   font-size: 12px;
   font-weight: 500;
   text-align: center;
@@ -134,14 +146,17 @@ li {
   font-size: 12px;
   font-weight: bold;
 }
+
 .dropdown-pipe {
   border: 1px solid rgb(230, 226, 226);
 }
+
 .dropdown-right {
   display: flex;
   width: 30%;
   flex-wrap: wrap;
 }
+
 .product-card-right {
   width: 11rem;
   font-size: 12px;
@@ -149,6 +164,7 @@ li {
   margin: 1rem;
   border-radius: 10px;
 }
+
 .products {
   display: flex;
   align-items: center;
@@ -156,116 +172,443 @@ li {
   border-radius: 10px;
   transition: 0.3s;
 }
+
 .products:hover {
   border: 1px dashed black;
   border-radius: 10px;
 }
+
 .products span {
   font-size: 12px;
   font-weight: 500;
   color: #333;
 }
-/* shop dropdown ends here*/
 
-/*hero-section-one starts here*/
+/* ===========================
+   Hero Section One
+=========================== */
 .Banner {
   width: 100%;
   height: 700px;
-  background-image: url("image/bg-hero");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  transition: 2s ease-in-out;
+  background: url("image/bg-hero") no-repeat center/cover;
   padding: 5rem;
   position: relative;
+  transition: 2s ease-in-out;
 }
+
 .Banner:hover {
   border: 1px dashed black;
 }
+
 .Banner div {
   font-size: 2rem;
   position: absolute;
   text-align: center;
-  left: 50%;
-  top: 70%;
+  left: 52.5%;
+  top: 78.5%;
   transform: translateX(-50%);
 }
+
 .Learn {
+  border: none;
   border-bottom: 1px solid black;
+  background: transparent;
   font-size: 13px;
-  background-color: transparent;
   font-weight: 600;
-  padding: 0.7rem 0rem;
-  left: 45%;
-  top: 85%;
+  padding: 0.7rem 0;
   position: absolute;
+  left: 52.5%;
+  top: 86%;
   letter-spacing: 1px;
+  transform: translateX(-50%);
 }
+
 .Pre-Order {
   border: 1px solid black;
   font-size: 13px;
-  background-color: transparent;
+  background: transparent;
   font-weight: 600;
   padding: 0.7rem 1rem;
-  left: 55%;
-  top: 85%;
   position: absolute;
+  left: 60%;
+  top: 86%;
   border-radius: 25px;
   letter-spacing: 1px;
   transition: 0.3s;
 }
+
 .Pre-Order:hover {
   background-color: black;
   color: #fff;
 }
-/*hero-section-one ends here*/
-
-/* ✅ Keep your Banner-two, grid cards, banners, footer same... */
 
 /* ===========================
-   Phones (max-width: 600px)
+   Hero Section Two
 =========================== */
+.Banner-two {
+  width: 100vw;
+  height: 100vh;
+  background: url("image/hero-section-2-img.avif") no-repeat center/cover;
+  padding: 30rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.Banner-two > p {
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: 32rem;
+}
+
+.More {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  padding: 0.7rem 0;
+  position: absolute;
+  margin-top: 38rem;
+  margin-right: 13rem;
+  letter-spacing: 1px;
+}
+
+.More-two {
+  border: 1px solid black;
+  font-size: 13px;
+  background: transparent;
+  font-weight: 600;
+  padding: 0.7rem 1rem;
+  position: absolute;
+  margin-top: 38rem;
+  margin-left: 13rem;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.More-two:hover {
+  background-color: black;
+  color: #fff;
+}
+
+/* ===========================
+   Grid Cards
+=========================== */
+.card,
+.card-one {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  padding-top: 2rem;
+  margin: 3rem;
+  transition: 1s ease-in-out;
+}
+
+.card > div,
+.card-one > div {
+  background-color: #f7f7f7;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+.card > div:hover,
+.card-one > div:hover {
+  border: 1px dashed black;
+}
+
+.card h2,
+.card-one h2 {
+  text-align: center;
+  margin: 0;
+}
+
+.card img,
+.card-one img {
+  width: 80%;
+  height: auto;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover,
+.card-one img:hover {
+  transform: scale(1.1);
+}
+
+.card button,
+.card-one button {
+  height: 2.5rem;
+  border-radius: 40px;
+  background-color: black;
+  color: #fff;
+  width: 4.3rem;
+  text-align: center;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+}
+
+.card button:hover {
+  transform: translateY(-20px);
+}
+
+.card-one button:hover {
+  transform: translateY(-50px);
+}
+
+/* ===========================
+   Banner Third
+=========================== */
+.banner-third {
+  width: 100%;
+  height: 100vh;
+  background: url("image/4th img.png") no-repeat center/cover;
+}
+
+.banner-third > h1 {
+  font-size: 3.5rem;
+  padding: 23rem 0 0 10rem;
+}
+
+.banner-third > p {
+  font-size: 1.7rem;
+  padding: 1rem 0 0 10rem;
+}
+
+#learn {
+  border: none;
+  border-bottom: 1px solid black;
+  background: transparent;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 1rem 0 0 10rem;
+  letter-spacing: 1px;
+}
+
+#view {
+  border: 1px solid black;
+  font-size: 13px;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  padding: 0.7rem 1.5rem;
+  margin: 1rem 0 0 1rem;
+  transition: 0.3s;
+}
+
+#view:hover {
+  background-color: black;
+  color: #fff;
+}
+
+/* ===========================
+   Banner Four (Washing Machine)
+=========================== */
+.banner-four {
+  width: 100%;
+  min-height: 100vh;
+  background: #000 url("image/washing machine") no-repeat left center/contain;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 8rem;
+}
+
+.banner-content {
+  max-width: 480px;
+  text-align: left;
+}
+
+.banner-four .heading {
+  font-size: 3.5rem;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.banner-four .subtext {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  opacity: 0.85;
+}
+
+.banner-four .btn1 {
+  border: none;
+  border-bottom: 1px solid #fff;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+  margin-right: 1.5rem;
+  cursor: pointer;
+  transition: opacity 0.3s;
+}
+
+.banner-four .btn1:hover {
+  opacity: 0.7;
+}
+
+.banner-four .btn2 {
+  border: 1px solid #fff;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  color: #fff;
+  padding: 0.7rem 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.banner-four .btn2:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===========================
+   Content / Footer / Etc
+=========================== */
+.text {
+  width: 95vw;
+  background: #f7f7f7;
+  padding: 1.5rem 2rem;
+}
+
+.text p {
+  font-size: 12px;
+  text-align: justify;
+}
+
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin: 2rem;
+  width: 95vw;
+  background: #fff;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-column {
+  padding: 20px 10px;
+  border-right: 1px solid #ddd;
+}
+
+.menu-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.menu-column p {
+  font-size: 14px;
+  line-height: 2rem;
+  cursor: pointer;
+}
+
+.menu-column p:hover {
+  color: #007aff;
+  text-decoration: underline;
+}
+
+footer {
+  margin: 0 2rem;
+  width: 95vw;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+footer > p {
+  font-size: 12px;
+  padding: 0.5rem 0;
+}
+
+footer > p > a {
+  text-decoration: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 2px solid #ddd;
+  padding: 1rem 0;
+}
+
+.left-links,
+.right-links {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.left-links a,
+.right-links a {
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+}
+
+/* ===========================
+   Responsive Queries
+=========================== */
+
+/* Phones */
 @media (max-width: 600px) {
-  /* Fix background scaling */
+  header {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .header-left {
+    display: none;
+  }
+  .hamburger-hide {
+    width: 70%;
+    right: -70%;
+  }
+  .search input {
+    width: 120px;
+    font-size: 12px;
+  }
   .Banner,
   .Banner-two,
-  .banner-third,
-  .banner-four {
-    background-size: cover !important;
-    background-position: center !important;
+  .banner-third {
+    height: auto;
+    padding: 2rem 1rem;
+    background-position: center;
   }
-
-  /* Buttons centered */
+  .Banner div,
+  .Banner-two > p,
   .Learn,
   .Pre-Order,
   .More,
   .More-two {
-    left: 50% !important;
+    left: 50%;
+    top: auto;
     transform: translateX(-50%);
   }
-
-  /* Grid fixes */
   .card,
-  .card-one {
-    grid-template-columns: 1fr;
-    height: auto;
-  }
-
+  .card-one,
   .grid-menu {
     grid-template-columns: 1fr;
+    margin: 1rem;
   }
-
-  /* Footer stack */
   .footer {
     flex-direction: column;
-    gap: 0.8rem;
-    align-items: flex-start;
+    gap: 0.5rem;
+    align-items: center;
   }
 }
 
-/* ===========================
-   Tablets (601px – 900px)
-=========================== */
+/* Tablets */
 @media (min-width: 601px) and (max-width: 900px) {
   .card,
   .card-one {
@@ -274,11 +617,13 @@ li {
   .grid-menu {
     grid-template-columns: repeat(2, 1fr);
   }
+  .Banner {
+    height: 500px;
+    padding: 3rem;
+  }
 }
 
-/* ===========================
-   Small Desktops (901px – 1200px)
-=========================== */
+/* Small Desktops */
 @media (min-width: 901px) and (max-width: 1200px) {
   .card,
   .card-one {
@@ -286,5 +631,15 @@ li {
   }
   .grid-menu {
     grid-template-columns: repeat(3, 1fr);
+  }
+  .banner-third h1 {
+    font-size: 3rem;
+    padding: 16rem 3rem 0;
+  }
+  .banner-four .heading {
+    font-size: 3rem;
+  }
+  .banner-four .subtext {
+    font-size: 1.3rem;
   }
 }
