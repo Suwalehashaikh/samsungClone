@@ -1,6 +1,6 @@
-/* =======================
-   Reset
-======================= */
+/* ===========================
+   Global Reset
+=========================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,16 +8,16 @@
   box-sizing: border-box;
 }
 
-/* =======================
+/* ===========================
    Header
-======================= */
+=========================== */
 header {
   display: flex;
   align-items: center;
   justify-content: space-around;
   font-weight: 500;
   flex-wrap: wrap;
-  padding: 0.5rem 1rem;
+  padding: 1rem;
 }
 
 .header-left {
@@ -41,14 +41,14 @@ li {
   padding: 20px 0;
 }
 
-.header-left > li:nth-child(1),
-.header-left > li:nth-child(1):hover {
-  border-bottom: none;
-}
-
 .header-left > li:hover {
   color: #006bea;
   border-bottom: 2.5px solid #006bea;
+}
+
+.header-left > li:nth-child(1),
+.header-left > li:nth-child(1):hover {
+  border-bottom: none;
 }
 
 .header-right div:nth-child(2) {
@@ -92,9 +92,9 @@ li {
   right: 0;
 }
 
-/* =======================
-   Shop Dropdown
-======================= */
+/* ===========================
+   Dropdown Menu
+=========================== */
 .dropdown-menu {
   width: 100%;
   left: 0;
@@ -102,13 +102,16 @@ li {
   position: absolute;
   display: none;
   gap: 5px;
-  background: #fff;
   transition: 0.3s ease-in;
-  padding: 1rem;
 }
 
 .dropdown:hover .dropdown-menu {
   display: flex;
+}
+
+.dropdown-left,
+.dropdown-right {
+  margin: 0.8rem 1rem;
 }
 
 .dropdown-left {
@@ -134,12 +137,8 @@ li {
   font-weight: 500;
 }
 
-.new-product::before {
-  left: 8rem;
-  color: #006bea;
-  padding: 2px 6px;
-  font-size: 12px;
-  font-weight: bold;
+.dropdown-pipe {
+  border: 1px solid rgb(230, 226, 226);
 }
 
 .dropdown-right {
@@ -163,10 +162,12 @@ li {
   border-radius: 10px;
   transition: 0.3s;
   padding: 0.5rem;
+  gap: 0.5rem;
 }
 
 .products:hover {
   border: 1px dashed black;
+  border-radius: 10px;
 }
 
 .products span {
@@ -175,15 +176,16 @@ li {
   color: #333;
 }
 
-/* =======================
+/* ===========================
    Hero Section One
-======================= */
+=========================== */
 .Banner {
   width: 100%;
   height: 700px;
-  background: url("image/bg-hero") no-repeat center/cover;
-  position: relative;
+  background: url("image/bg-hero.jpg") no-repeat center/cover;
   transition: 2s ease-in-out;
+  padding: 5rem;
+  position: relative;
 }
 
 .Banner:hover {
@@ -194,36 +196,36 @@ li {
   font-size: 2rem;
   position: absolute;
   text-align: center;
-  left: 50%;
+  left: 52.5%;
   top: 78.5%;
-  transform: translateX(-50%);
+  transform: translate(-50%, -50%);
+}
+
+.Learn,
+.Pre-Order {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  position: absolute;
 }
 
 .Learn {
   border: none;
   border-bottom: 1px solid black;
   background: transparent;
-  font-size: 13px;
-  font-weight: 600;
   padding: 0.7rem 0;
-  position: absolute;
-  left: 50%;
+  left: 52.5%;
   top: 86%;
   transform: translateX(-50%);
-  letter-spacing: 1px;
 }
 
 .Pre-Order {
   border: 1px solid black;
-  font-size: 13px;
   background: transparent;
-  font-weight: 600;
+  border-radius: 25px;
   padding: 0.7rem 1rem;
-  position: absolute;
   left: 60%;
   top: 86%;
-  border-radius: 25px;
-  letter-spacing: 1px;
   transition: 0.3s;
 }
 
@@ -232,48 +234,48 @@ li {
   color: #fff;
 }
 
-/* =======================
+/* ===========================
    Hero Section Two
-======================= */
+=========================== */
 .Banner-two {
   width: 100%;
   height: 100vh;
   background: url("image/hero-section-2-img.avif") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
 }
 
 .Banner-two > p {
   font-size: 1.5rem;
+  text-align: center;
+  margin-top: 32rem;
   position: absolute;
-  top: 70%;
-  left: 50%;
-  transform: translateX(-50%);
+}
+
+.More,
+.More-two {
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  background: transparent;
+  position: absolute;
+  margin-top: 38rem;
 }
 
 .More {
   border: none;
   border-bottom: 1px solid black;
-  background: transparent;
-  font-size: 13px;
-  font-weight: 600;
   padding: 0.7rem 0;
-  position: absolute;
-  top: 78%;
-  left: 45%;
-  letter-spacing: 1px;
+  margin-right: 13rem;
 }
 
 .More-two {
   border: 1px solid black;
-  font-size: 13px;
-  background: transparent;
-  font-weight: 600;
-  padding: 0.7rem 1rem;
-  position: absolute;
-  top: 78%;
-  left: 55%;
   border-radius: 25px;
-  letter-spacing: 1px;
+  padding: 0.7rem 1rem;
+  margin-left: 13rem;
   transition: 0.3s;
 }
 
@@ -282,40 +284,46 @@ li {
   color: #fff;
 }
 
-/* =======================
-   Cards
-======================= */
-.card,
-.card-one {
+/* ===========================
+   Grid Cards
+=========================== */
+.card {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
+  padding: 2rem;
   margin: 3rem;
+  background: #fff;
 }
 
-.card > div,
-.card-one > div {
+.card > div {
   background: #f7f7f7;
   display: grid;
+  grid-template-rows: auto 1fr auto;
   justify-items: center;
   align-items: center;
   padding: 1rem;
+  transition: 0.3s;
 }
 
-.card img,
-.card-one img {
+.card > div:hover {
+  border: 1px dashed black;
+}
+
+.card h2 {
+  text-align: center;
+}
+
+.card img {
   width: 80%;
-  height: auto;
   transition: transform 0.3s;
 }
 
-.card img:hover,
-.card-one img:hover {
+.card img:hover {
   transform: scale(1.1);
 }
 
-.card button,
-.card-one button {
+.card button {
   height: 2.5rem;
   border-radius: 40px;
   background: black;
@@ -323,28 +331,26 @@ li {
   width: 4.3rem;
   border: none;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .card button:hover {
-  transform: translateY(-20px);
+  transform: translateY(-5px);
 }
 
-.card-one button:hover {
-  transform: translateY(-50px);
-}
-
-/* =======================
+/* ===========================
    Banner Third
-======================= */
+=========================== */
 .banner-third {
   width: 100%;
   height: 100vh;
   background: url("image/4th img.png") no-repeat center/cover;
+  border: none;
 }
 
 .banner-third > h1 {
   font-size: 3.5rem;
-  padding: 20rem 0 0 10rem;
+  padding: 23rem 0 0 10rem;
 }
 
 .banner-third > p {
@@ -352,13 +358,40 @@ li {
   padding: 1rem 0 0 10rem;
 }
 
-/* =======================
-   Banner Four
-======================= */
+#learn {
+  border: none;
+  border-bottom: 1px solid black;
+  font-size: 13px;
+  font-weight: 600;
+  margin: 1rem 0 0 10rem;
+  letter-spacing: 1px;
+  background: transparent;
+}
+
+#view {
+  border: 1px solid black;
+  font-size: 13px;
+  background: transparent;
+  font-weight: 600;
+  border-radius: 25px;
+  letter-spacing: 1px;
+  transition: 0.3s;
+  margin: 1rem 0 0 1rem;
+  padding: 0.7rem 1.5rem;
+}
+
+#view:hover {
+  background: black;
+  color: #fff;
+}
+
+/* ===========================
+   Banner Four (Washing Machine)
+=========================== */
 .banner-four {
   width: 100%;
   min-height: 100vh;
-  background: #000 url("image/washing machine") no-repeat left center/contain;
+  background: url("image/washing machine") no-repeat left center/contain #000;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -367,11 +400,14 @@ li {
 
 .banner-content {
   max-width: 480px;
+  text-align: left;
 }
 
 .banner-four .heading {
   font-size: 3.5rem;
   color: #fff;
+  font-weight: 700;
+  margin-bottom: 1rem;
 }
 
 .banner-four .subtext {
@@ -384,15 +420,16 @@ li {
 .banner-four .btn1,
 .banner-four .btn2 {
   font-size: 14px;
-  background: transparent;
   font-weight: 600;
   letter-spacing: 1px;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 .banner-four .btn1 {
   border: none;
   border-bottom: 1px solid #fff;
+  background: transparent;
   color: #fff;
   margin-right: 1.5rem;
 }
@@ -403,10 +440,10 @@ li {
 
 .banner-four .btn2 {
   border: 1px solid #fff;
+  background: transparent;
+  border-radius: 25px;
   color: #fff;
   padding: 0.7rem 1.8rem;
-  border-radius: 25px;
-  transition: all 0.3s;
 }
 
 .banner-four .btn2:hover {
@@ -414,13 +451,82 @@ li {
   color: #000;
 }
 
-/* =======================
-   Text Content
-======================= */
-.text {
-  width: 95vw;
-  background: #f7f7f7;
+/* Responsive for Banner Four */
+@media (max-width: 768px) {
+  .banner-four {
+    flex-direction: column;
+    justify-content: center;
+    padding: 2rem;
+    background-position: center top;
+    background-size: cover;
+    text-align: center;
+  }
+  .banner-content {
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+/* ===========================
+   Electronics Grid
+=========================== */
+.electronic-item-grid {
+  width: 100%;
   padding: 2rem;
+}
+
+.card-one {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.card-one > div {
+  background: #f7f7f7;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  padding: 1rem;
+  transition: 0.3s;
+}
+
+.card-one > div:hover {
+  border: 1px dashed black;
+}
+
+.card-one img {
+  width: 80%;
+  transition: 0.3s;
+}
+
+.card-one img:hover {
+  transform: scale(1.1);
+}
+
+.card-one button {
+  height: 2.5rem;
+  border-radius: 40px;
+  background: black;
+  color: #fff;
+  width: 4.3rem;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.card-one button:hover {
+  transform: translateY(-5px);
+}
+
+/* ===========================
+   Content
+=========================== */
+.text {
+  background: #f7f7f7;
+  width: 95%;
+  margin: auto;
+  padding: 1.5rem 2rem;
 }
 
 .text p {
@@ -428,26 +534,117 @@ li {
   text-align: justify;
 }
 
-/* =======================
-   Footer
-======================= */
-footer {
-  margin: 2rem;
-  width: 95vw;
+/* ===========================
+   Offer Counter
+=========================== */
+.offer-container {
+  max-width: 500px;
+  margin: 100px auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #8391e0, #beb9b0);
+  color: white;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+}
+
+.offer-container h2 {
+  margin-bottom: 10px;
+  font-size: 26px;
+}
+
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.time-box {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+  border-radius: 10px;
+  text-align: center;
+  min-width: 70px;
+}
+
+.time-box span {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.time-label {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* ===========================
+   Grid Menu
+=========================== */
+.grid-menu {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
   background: #fff;
+  margin: 2rem;
   border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  width: 95%;
+}
+
+.menu-column {
+  padding: 20px 10px;
+  border-right: 1px solid #ddd;
+}
+
+.menu-column h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.menu-column p {
+  font-size: 14px;
+  margin: 6px 0;
+  cursor: pointer;
+  line-height: 2rem;
+}
+
+.menu-column p:hover {
+  color: #007aff;
+  text-decoration: underline;
+}
+
+/* ===========================
+   Footer
+=========================== */
+footer {
+  margin: 0 2rem;
+  width: 95%;
+  background: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+footer > p {
+  font-size: 12px;
+  padding: 0.5rem 0;
+}
+
+footer > p > a {
+  text-decoration: none;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-top: 2px solid #ddd;
   padding: 1rem 0;
 }
 
 .left-links,
 .right-links {
   display: flex;
+  list-style: none;
   gap: 15px;
 }
 
@@ -455,13 +652,23 @@ footer {
 .right-links a {
   text-decoration: none;
   color: black;
+}
+
+.left-links a {
   font-size: 12px;
 }
 
-/* =======================
-   Responsive
-======================= */
-@media (max-width: 768px) {
+.right-links a {
+  font-size: 15px;
+}
+
+/* ===========================
+   Responsive Layouts
+=========================== */
+@media (max-width: 600px) {
+  header {
+    justify-content: space-between;
+  }
   .header-left {
     display: none;
   }
@@ -469,21 +676,70 @@ footer {
     width: 70%;
     right: -70%;
   }
-  .Banner,
-  .Banner-two,
-  .banner-third,
-  .banner-four {
-    height: auto;
-    padding: 2rem 1rem;
-    text-align: center;
-  }
   .card,
   .card-one {
     grid-template-columns: 1fr;
-    margin: 1rem;
+  }
+  .grid-menu {
+    grid-template-columns: 1fr;
+  }
+  .banner-third h1 {
+    font-size: 1.8rem;
+    padding: 6rem 1rem 0;
+  }
+  .banner-third p {
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+  }
+  .banner-four .heading {
+    font-size: 2rem;
+  }
+  .banner-four .subtext {
+    font-size: 1rem;
   }
   .footer {
     flex-direction: column;
     gap: 1rem;
+    align-items: flex-start;
+  }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+  .card,
+  .card-one {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid-menu {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .banner-third h1 {
+    font-size: 2.2rem;
+    padding: 8rem 2rem 0;
+  }
+  .banner-third p {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+  }
+  .banner-four .heading {
+    font-size: 2.5rem;
+  }
+  .banner-four .subtext {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 901px) and (max-width: 1200px) {
+  .card,
+  .card-one {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid-menu {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .banner-third h1 {
+    font-size: 2.8rem;
+  }
+  .banner-third p {
+    font-size: 1.3rem;
   }
 }
