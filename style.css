@@ -1,6 +1,6 @@
-/* ===========================
-   Base Reset
-=========================== */
+/* =======================
+   Reset
+======================= */
 * {
   margin: 0;
   padding: 0;
@@ -8,9 +8,9 @@
   box-sizing: border-box;
 }
 
-/* ===========================
+/* =======================
    Header
-=========================== */
+======================= */
 header {
   display: flex;
   align-items: center;
@@ -92,9 +92,9 @@ li {
   right: 0;
 }
 
-/* ===========================
+/* =======================
    Shop Dropdown
-=========================== */
+======================= */
 .dropdown-menu {
   width: 100%;
   left: 0;
@@ -102,18 +102,13 @@ li {
   position: absolute;
   display: none;
   gap: 5px;
-  transition: 0.3s ease-in;
   background: #fff;
+  transition: 0.3s ease-in;
+  padding: 1rem;
 }
 
 .dropdown:hover .dropdown-menu {
   display: flex;
-}
-
-.dropdown-left,
-.dropdown-right {
-  border: none;
-  margin: 0.8rem 1rem;
 }
 
 .dropdown-left {
@@ -147,10 +142,6 @@ li {
   font-weight: bold;
 }
 
-.dropdown-pipe {
-  border: 1px solid rgb(230, 226, 226);
-}
-
 .dropdown-right {
   display: flex;
   width: 30%;
@@ -171,11 +162,11 @@ li {
   background-color: #f6f6f6;
   border-radius: 10px;
   transition: 0.3s;
+  padding: 0.5rem;
 }
 
 .products:hover {
   border: 1px dashed black;
-  border-radius: 10px;
 }
 
 .products span {
@@ -184,14 +175,13 @@ li {
   color: #333;
 }
 
-/* ===========================
+/* =======================
    Hero Section One
-=========================== */
+======================= */
 .Banner {
   width: 100%;
   height: 700px;
   background: url("image/bg-hero") no-repeat center/cover;
-  padding: 5rem;
   position: relative;
   transition: 2s ease-in-out;
 }
@@ -204,7 +194,7 @@ li {
   font-size: 2rem;
   position: absolute;
   text-align: center;
-  left: 52.5%;
+  left: 50%;
   top: 78.5%;
   transform: translateX(-50%);
 }
@@ -217,10 +207,10 @@ li {
   font-weight: 600;
   padding: 0.7rem 0;
   position: absolute;
-  left: 52.5%;
+  left: 50%;
   top: 86%;
-  letter-spacing: 1px;
   transform: translateX(-50%);
+  letter-spacing: 1px;
 }
 
 .Pre-Order {
@@ -238,28 +228,26 @@ li {
 }
 
 .Pre-Order:hover {
-  background-color: black;
+  background: black;
   color: #fff;
 }
 
-/* ===========================
+/* =======================
    Hero Section Two
-=========================== */
+======================= */
 .Banner-two {
-  width: 100vw;
+  width: 100%;
   height: 100vh;
   background: url("image/hero-section-2-img.avif") no-repeat center/cover;
-  padding: 30rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
 }
 
 .Banner-two > p {
   font-size: 1.5rem;
   position: absolute;
-  margin-top: 32rem;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .More {
@@ -270,8 +258,8 @@ li {
   font-weight: 600;
   padding: 0.7rem 0;
   position: absolute;
-  margin-top: 38rem;
-  margin-right: 13rem;
+  top: 78%;
+  left: 45%;
   letter-spacing: 1px;
 }
 
@@ -282,57 +270,43 @@ li {
   font-weight: 600;
   padding: 0.7rem 1rem;
   position: absolute;
-  margin-top: 38rem;
-  margin-left: 13rem;
+  top: 78%;
+  left: 55%;
   border-radius: 25px;
   letter-spacing: 1px;
   transition: 0.3s;
 }
 
 .More-two:hover {
-  background-color: black;
+  background: black;
   color: #fff;
 }
 
-/* ===========================
-   Grid Cards
-=========================== */
+/* =======================
+   Cards
+======================= */
 .card,
 .card-one {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 1rem;
-  padding-top: 2rem;
   margin: 3rem;
-  transition: 1s ease-in-out;
 }
 
 .card > div,
 .card-one > div {
-  background-color: #f7f7f7;
+  background: #f7f7f7;
   display: grid;
-  grid-template-rows: auto 1fr auto;
   justify-items: center;
   align-items: center;
   padding: 1rem;
-}
-
-.card > div:hover,
-.card-one > div:hover {
-  border: 1px dashed black;
-}
-
-.card h2,
-.card-one h2 {
-  text-align: center;
-  margin: 0;
 }
 
 .card img,
 .card-one img {
   width: 80%;
   height: auto;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s;
 }
 
 .card img:hover,
@@ -344,13 +318,11 @@ li {
 .card-one button {
   height: 2.5rem;
   border-radius: 40px;
-  background-color: black;
+  background: black;
   color: #fff;
   width: 4.3rem;
-  text-align: center;
   border: none;
   cursor: pointer;
-  transition: 0.3s ease-in-out;
 }
 
 .card button:hover {
@@ -361,9 +333,9 @@ li {
   transform: translateY(-50px);
 }
 
-/* ===========================
+/* =======================
    Banner Third
-=========================== */
+======================= */
 .banner-third {
   width: 100%;
   height: 100vh;
@@ -372,7 +344,7 @@ li {
 
 .banner-third > h1 {
   font-size: 3.5rem;
-  padding: 23rem 0 0 10rem;
+  padding: 20rem 0 0 10rem;
 }
 
 .banner-third > p {
@@ -380,36 +352,9 @@ li {
   padding: 1rem 0 0 10rem;
 }
 
-#learn {
-  border: none;
-  border-bottom: 1px solid black;
-  background: transparent;
-  font-size: 13px;
-  font-weight: 600;
-  margin: 1rem 0 0 10rem;
-  letter-spacing: 1px;
-}
-
-#view {
-  border: 1px solid black;
-  font-size: 13px;
-  background: transparent;
-  font-weight: 600;
-  border-radius: 25px;
-  letter-spacing: 1px;
-  padding: 0.7rem 1.5rem;
-  margin: 1rem 0 0 1rem;
-  transition: 0.3s;
-}
-
-#view:hover {
-  background-color: black;
-  color: #fff;
-}
-
-/* ===========================
-   Banner Four (Washing Machine)
-=========================== */
+/* =======================
+   Banner Four
+======================= */
 .banner-four {
   width: 100%;
   min-height: 100vh;
@@ -422,14 +367,11 @@ li {
 
 .banner-content {
   max-width: 480px;
-  text-align: left;
 }
 
 .banner-four .heading {
   font-size: 3.5rem;
   color: #fff;
-  font-weight: 700;
-  margin-bottom: 1rem;
 }
 
 .banner-four .subtext {
@@ -439,16 +381,20 @@ li {
   opacity: 0.85;
 }
 
+.banner-four .btn1,
+.banner-four .btn2 {
+  font-size: 14px;
+  background: transparent;
+  font-weight: 600;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
 .banner-four .btn1 {
   border: none;
   border-bottom: 1px solid #fff;
-  background: transparent;
-  font-size: 14px;
-  font-weight: 600;
   color: #fff;
   margin-right: 1.5rem;
-  cursor: pointer;
-  transition: opacity 0.3s;
 }
 
 .banner-four .btn1:hover {
@@ -457,14 +403,9 @@ li {
 
 .banner-four .btn2 {
   border: 1px solid #fff;
-  background: transparent;
-  font-size: 14px;
-  font-weight: 600;
-  border-radius: 25px;
-  letter-spacing: 1px;
   color: #fff;
   padding: 0.7rem 1.8rem;
-  cursor: pointer;
+  border-radius: 25px;
   transition: all 0.3s;
 }
 
@@ -473,13 +414,13 @@ li {
   color: #000;
 }
 
-/* ===========================
-   Content / Footer / Etc
-=========================== */
+/* =======================
+   Text Content
+======================= */
 .text {
   width: 95vw;
   background: #f7f7f7;
-  padding: 1.5rem 2rem;
+  padding: 2rem;
 }
 
 .text p {
@@ -487,66 +428,26 @@ li {
   text-align: justify;
 }
 
-.grid-menu {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 20px;
+/* =======================
+   Footer
+======================= */
+footer {
   margin: 2rem;
   width: 95vw;
   background: #fff;
   border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-}
-
-.menu-column {
-  padding: 20px 10px;
-  border-right: 1px solid #ddd;
-}
-
-.menu-column h3 {
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.menu-column p {
-  font-size: 14px;
-  line-height: 2rem;
-  cursor: pointer;
-}
-
-.menu-column p:hover {
-  color: #007aff;
-  text-decoration: underline;
-}
-
-footer {
-  margin: 0 2rem;
-  width: 95vw;
-  background: #fff;
-  border-bottom: 1px solid #ddd;
-}
-
-footer > p {
-  font-size: 12px;
-  padding: 0.5rem 0;
-}
-
-footer > p > a {
-  text-decoration: none;
 }
 
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-top: 2px solid #ddd;
   padding: 1rem 0;
 }
 
 .left-links,
 .right-links {
   display: flex;
-  list-style: none;
   gap: 15px;
 }
 
@@ -557,16 +458,10 @@ footer > p > a {
   font-size: 12px;
 }
 
-/* ===========================
-   Responsive Queries
-=========================== */
-
-/* Phones */
-@media (max-width: 600px) {
-  header {
-    flex-direction: row;
-    justify-content: space-between;
-  }
+/* =======================
+   Responsive
+======================= */
+@media (max-width: 768px) {
   .header-left {
     display: none;
   }
@@ -574,72 +469,21 @@ footer > p > a {
     width: 70%;
     right: -70%;
   }
-  .search input {
-    width: 120px;
-    font-size: 12px;
-  }
   .Banner,
   .Banner-two,
-  .banner-third {
+  .banner-third,
+  .banner-four {
     height: auto;
     padding: 2rem 1rem;
-    background-position: center;
-  }
-  .Banner div,
-  .Banner-two > p,
-  .Learn,
-  .Pre-Order,
-  .More,
-  .More-two {
-    left: 50%;
-    top: auto;
-    transform: translateX(-50%);
+    text-align: center;
   }
   .card,
-  .card-one,
-  .grid-menu {
+  .card-one {
     grid-template-columns: 1fr;
     margin: 1rem;
   }
   .footer {
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: center;
-  }
-}
-
-/* Tablets */
-@media (min-width: 601px) and (max-width: 900px) {
-  .card,
-  .card-one {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .grid-menu {
-    grid-template-columns: repeat(2, 1fr);
-  }
-  .Banner {
-    height: 500px;
-    padding: 3rem;
-  }
-}
-
-/* Small Desktops */
-@media (min-width: 901px) and (max-width: 1200px) {
-  .card,
-  .card-one {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .grid-menu {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .banner-third h1 {
-    font-size: 3rem;
-    padding: 16rem 3rem 0;
-  }
-  .banner-four .heading {
-    font-size: 3rem;
-  }
-  .banner-four .subtext {
-    font-size: 1.3rem;
+    gap: 1rem;
   }
 }
