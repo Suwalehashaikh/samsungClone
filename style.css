@@ -203,27 +203,29 @@ li {
 
 .Learn {
   border: none;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid white;
   background: transparent;
   padding: 0.7rem 0;
+  color: white;
   left: 52.5%;
   top: 86%;
   transform: translateX(-50%);
 }
 
 .Pre-Order {
-  border: 1px solid black;
+  border: 1px solid white;
   background: transparent;
   border-radius: 25px;
   padding: 0.7rem 1rem;
   left: 60%;
   top: 86%;
   transition: 0.3s;
+  color: white;
 }
 
 .Pre-Order:hover {
-  background: black;
-  color: #fff;
+  background: white;
+  color: black;
 }
 
 /* ===========================
